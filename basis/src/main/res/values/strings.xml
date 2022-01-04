@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="myAppId">205</string>
+    <string name="appsecret">huiyi</string>
+
+    <string name="app_name">app_name</string>
+    <string name="toast_data">服务器数据有误</string>
+
+    <string name="toast_base_1">网络异常,请检查网络设置</string>
+    <string name="toast_base_2">请求体报错</string>
+    <string name="toast_base_3">请求连接失败，请检查网络</string>
+    <string name="toast_base_4">请求连接未成功</string>
+    <string name="toast_base_5">数据有误，解析失败</string>
+
+    <string name="throw_1">创建的文件夹不能为空</string>
+    <string name="toast_1">手机内存不可用!</string>
+    <string name="toast_2">创建文件夹失败</string>
+    <string name="toast_3">文件名不能为空</string>
+    <string name="toast_4">下载成功 %s</string>
+    <string name="toast_5">下载失败</string>
+    <string name="toast_6">取消下载</string>
+    <string name="s_1">打开</string>
+    <string name="s_2">关闭</string>
+
+
+    <string name="select_photo">已选择%s张图片（至少选择%s张以上的图片）</string>
+    <string name="select_video">已选择%s个视频（至少选择%s个以上的视频）</string>
+    <string name="pirvacy">在您使用前请仔细阅读《用户协议》和《隐私政策》，我们将严格遵守您同意的各项条款使用您的信息，以便为您提供更好的服务。\n为保障我们的APP正常功能使用，我们将会申请：存储权限，摄像头权限，相册权限。收集IMEI、IMSI、设备MAC地址、软件安装列表，用户广告推广。</string>
+
+</resources>

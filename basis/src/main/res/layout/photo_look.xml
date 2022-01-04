@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yc.basis.widget.ViewPagerFixed
+        android:id="@+id/vp_photo_look"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/fl_title_1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/bg_f3f3f3_yuan"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_look_share"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_f3f3f3_yuan"
+        android:gravity="center"
+        android:text="分享"
+        android:textColor="@color/color_333333" />
+
+</FrameLayout>

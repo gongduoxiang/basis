@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WheelPicker">
+        <!--  item的数量  控制一半 -1 的数量 -->
+        <attr name="halfVisibleItemCount" format="integer" />
+        <!--  大小  -->
+        <attr name="itemTextSize" format="dimension" />
+        <attr name="itemMaximumWidthText" format="string" />
+        <attr name="itemTextColor" format="color" />
+        <attr name="textGradual" format="boolean" />
+        <attr name="selectedTextColor" format="color" />
+        <attr name="selectedTextSize" format="dimension" />
+        <attr name="currentItemPosition" format="integer" />
+        <attr name="itemWidthSpace" format="dimension" />
+        <attr name="itemHeightSpace" format="dimension" />
+        <attr name="zoomInSelectedItem" format="boolean" />
+        <attr name="wheelCyclic" format="boolean" />
+        <!--  选中item的背景  -->
+        <attr name="wheelCurtain" format="boolean" />
+        <attr name="wheelCurtainColor" format="color" />
+        <attr name="wheelCurtainBorder" format="boolean" />
+        <attr name="wheelCurtainBorderColor" format="color" />
+        <!-- 指示器  -->
+        <attr name="indicatorText" format="string" />
+        <attr name="indicatorTextSize" format="dimension" />
+        <attr name="indicatorTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DatePicker">
+        <attr name="itemTextSize" />
+        <attr name="halfVisibleItemCount" />
+        <attr name="itemTextColor" />
+        <attr name="textGradual" />
+        <attr name="selectedTextColor" />
+        <attr name="selectedTextSize" />
+        <attr name="itemWidthSpace" />
+        <attr name="itemHeightSpace" />
+        <attr name="zoomInSelectedItem" />
+        <attr name="wheelCyclic" />
+        <attr name="wheelCurtain" />
+        <!-- 背景的颜色 -->
+        <attr name="wheelCurtainColor" />
+        <attr name="wheelCurtainBorder" />
+        <attr name="wheelCurtainBorderColor" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="progress" format="integer" />       <!--圆环进度-->
+        <attr name="isSpacing" format="boolean" />       <!--是否在进度直接加 间距-->
+    </declare-styleable>
+
+    <declare-styleable name="TitleView">
+        <attr name="title" format="string" />
+        <attr name="isWhite" format="boolean" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="rightText" format="string" />
+        <attr name="rightTextBg" format="reference" />
+        <attr name="rightTextColor" format="color" />
+
+    </declare-styleable>
+
+</resources>

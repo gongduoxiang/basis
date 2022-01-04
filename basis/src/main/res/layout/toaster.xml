@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@android:id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_corner_lucency_black_50dp"
+        android:paddingBottom="9dp"
+        android:paddingLeft="28dp"
+        android:maxLines="3"
+        android:paddingRight="28dp"
+        android:paddingTop="9dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/color_FFFFFF"
+        android:textSize="16sp"
+        tools:text="提示提示" />
+
+</FrameLayout>

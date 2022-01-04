@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_refresh"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_noMsg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:drawableTop="@drawable/no_message"
+            android:drawablePadding="17dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="60dp"
+            android:text="暂无数据哦~"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_14"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

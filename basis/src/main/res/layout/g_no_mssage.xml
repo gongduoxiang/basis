@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_noMsg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:drawableTop="@drawable/no_message"
+    android:drawablePadding="17dp"
+    android:gravity="center_horizontal"
+    android:paddingTop="70dp"
+    android:text="暂无数据哦~"
+    android:background="@color/color_F3F3F3"
+    android:visibility="gone"
+    android:textColor="@color/color_999999"
+    android:textSize="@dimen/size_13" />
