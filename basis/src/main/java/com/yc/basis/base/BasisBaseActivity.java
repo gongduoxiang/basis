@@ -50,7 +50,6 @@ public abstract class BasisBaseActivity extends AppCompatActivity implements Bas
         initView();
         initSmartRefreshLayout();
         initTitleLayout();
-        initTitleLayout2();
         initData();
     }
 
@@ -89,6 +88,8 @@ public abstract class BasisBaseActivity extends AppCompatActivity implements Bas
         titleLayout = findViewById(R.id.titleView);
         if (titleLayout != null) {
             StatusBarUtil.setStatusBarHeight(titleLayout);
+        } else {
+            initTitleLayout2();
         }
     }
 
