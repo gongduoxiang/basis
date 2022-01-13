@@ -1,2 +1,2 @@
-include ':basis'
+include ':app', ':basis'
 rootProject.name = "MySdk"
