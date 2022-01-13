@@ -23,11 +23,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-//    api 'androidx.appcompat:appcompat:1.2.0'
-//    api 'androidx.core:core-ktx:1.3.2'
     api 'androidx.constraintlayout:constraintlayout:2.0.2'
-//    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-//    api 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0-beta01'
     //日志拦截器
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
     //今日头条适配
@@ -40,7 +36,7 @@ dependencies {
     api 'com.github.bumptech.glide:glide:4.10.0'
 //    api 'com.github.humorousz:FrameSequenceDrawable:1.0.1-SNAPSHOT'
     api 'androidx.recyclerview:recyclerview:1.2.0-alpha06'
-    api  'com.qq.e.union:union:+' // 广告
+    api  'com.qq.e.union:union:4.441.1311' // 广告
     // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库）
     api 'com.umeng.umsdk:common:9.3.8'// 必选
     api 'com.umeng.umsdk:asms:1.2.2'// 必选

@@ -11,6 +11,7 @@ import com.yc.basis.entity.LoginEventEntity;
 import com.yc.basis.http.BasisInfo;
 import com.yc.basis.satusbar.StatusBarUtil;
 import com.yc.basis.utils.SPUtils;
+import com.yc.basis.utils.Toaster;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -121,6 +122,15 @@ public class MeBasisFragment extends BaseFragment {
 //        startActivity(new Intent(getContext(), VipActivity.class));
     }
 
+    //true隐藏
+    protected void setVipGone() {
+        findViewById(R.id.tv_me_vip).setVisibility(View.GONE);
+        findViewById(R.id.view_line_me).setVisibility(View.GONE);
+        findViewById(R.id.tv_me_gg).setVisibility(View.GONE);
+        findViewById(R.id.view_me_zhzx).setVisibility(View.GONE);
+        findViewById(R.id.tv_me_zhzx).setVisibility(View.GONE);
+        findViewById(R.id.tv_me_login).setVisibility(View.GONE);
+    }
 
     @Override
     public void baseClick(View v) {
@@ -161,6 +171,8 @@ public class MeBasisFragment extends BaseFragment {
             } else {
                 startVipActivity();
             }
+        } else if (id == R.id.tv_me_zhzx) {
+            Toaster.toast("请联系客服注销账号");
         }
     }
 }

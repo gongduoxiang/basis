@@ -1,6 +1,7 @@
 package com.yc.basis.http.response;
 
 
+import com.yc.basis.entity.LoginEventEntity;
 import com.yc.basis.entity.User;
 import com.yc.basis.http.BaseCallbackString;
 import com.yc.basis.http.BaseHttpListener;
@@ -12,6 +13,7 @@ import com.yc.basis.utils.DataUtils;
 import com.yc.basis.utils.SPUtils;
 import com.yc.basis.utils.Toaster;
 
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -90,6 +92,64 @@ public class HttpCommon {
                             if (listner != null) listner.error(msg);
                         }
                     });
+    }
+
+    public static void sms(String mobile, BaseHttpListener listener) {
+        HttpBody body = new HttpBody();
+        body.add("mobile", mobile);
+        OkhttpManager.getInstance().post(Url.sms, body.build(), new BaseCallbackString() {
+            @Override
+            public void success(String result) throws JSONException {
+                listener.success("");
+            }
+
+            @Override
+            public void failure(String code, String msg) {
+                Toaster.toast(msg);
+                listener.error(msg);
+            }
+        });
+    }
+
+    public static void mobileLogin(String mobile, String code, BaseHttpListener listener) {
+        HttpBody body = new HttpBody();
+        body.add("mobile", mobile);
+        body.add("code", code);
+        OkhttpManager.getInstance().post(Url.mobileLogin, body.build(), new BaseCallbackString() {
+            @Override
+            public void success(String result) throws JSONException {
+                JSONObject object = new JSONObject(result);
+                String token = DataUtils.getString(object, "access_token");
+                SPUtils.saveToken(token);
+                if (DataUtils.isObject(object, "client")) {
+                    JSONObject ob = object.getJSONObject("client");
+                    User user = new User();
+                    user.name = DataUtils.getString(ob, "username");
+                    user.photo = DataUtils.getString(ob, "avatar");
+                    user.id = DataUtils.getString(ob, "id");
+                    user.id = DataUtils.getString(ob, "id");
+                    user.isVip = DataUtils.getInt(ob, "is_vip") == 1;
+                    if (user.isVip) {
+                        user.vipId = DataUtils.getString(ob, "level_id");
+                        user.timeText = DataUtils.getString(ob, "vip_due_time_text");
+                        user.time = DataUtils.getLong(ob, "vip_due_time") * 1000;
+                    } else {
+                        user.vipId = "";
+                        user.timeText = "";
+                        user.time = 0;
+                    }
+                    SPUtils.saveUser(user);
+                    SPUtils.saveUserId(DataUtils.getString(ob, "id"));
+                    EventBus.getDefault().post(new LoginEventEntity(LoginEventEntity.ok));
+                }
+                if (listener != null) listener.success(token);
+            }
+
+            @Override
+            public void failure(String code, String msg) {
+
+            }
+        });
     }
 
 }

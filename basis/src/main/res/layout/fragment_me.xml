@@ -209,6 +209,27 @@
 
             </FrameLayout>
 
+            <View
+                android:id="@+id/view_me_zhzx"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/color_F3F3F3" />
+
+            <TextView
+                android:id="@+id/tv_me_zhzx"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:drawableLeft="@drawable/shezhi"
+                android:drawableRight="@drawable/more"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:text="账号注销"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/size_16" />
         </LinearLayout>
 
         <TextView

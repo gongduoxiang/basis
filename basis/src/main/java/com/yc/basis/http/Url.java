@@ -14,6 +14,9 @@ public class Url {
     public static final String deduction = ip2 + "deduction";
     public static final String getAgreement = ip2 + "get-agreement";
 
+    public static final String sms = "http://app.yunchuan.info/api/v1/sms";   // 获取手机验证码 参数：mobile
+    public static final String mobileLogin = "http://app.yunchuan.info/api/v1/mobile-login";   // 验证码登录 参数：mobile  code
+
 
     public static final String upload = "";
 

@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,10 @@ public abstract class BasisBaseActivity extends AppCompatActivity implements Bas
     protected View loadLayout;
     private ViewGroup viewRoot;
     protected View noMessage;
+    protected ImageView backIcon;
+    protected TextView title, rightText;
+    protected View titleLayout2;
+    protected ImageView right;
 
 //    @Subscribe(threadMode = ThreadMode.MAIN)
 //    public void onEventMainThread(WifiEntity entity)
@@ -44,6 +50,7 @@ public abstract class BasisBaseActivity extends AppCompatActivity implements Bas
         initView();
         initSmartRefreshLayout();
         initTitleLayout();
+        initTitleLayout2();
         initData();
     }
 
@@ -82,6 +89,21 @@ public abstract class BasisBaseActivity extends AppCompatActivity implements Bas
         titleLayout = findViewById(R.id.titleView);
         if (titleLayout != null) {
             StatusBarUtil.setStatusBarHeight(titleLayout);
+        }
+    }
+
+    public void initTitleLayout2() {
+        title = findViewById(R.id.tv_title_title);
+        backIcon = findViewById(R.id.iv_title_back);
+        backLayout = findViewById(R.id.ll_title_back);
+        rightText = findViewById(R.id.tv_title_right);
+        right = findViewById(R.id.iv_title_right);
+        if (backLayout != null) {
+            backLayout.setOnClickListener(view -> onBackPressed());
+        }
+        titleLayout2 = findViewById(R.id.fl_title);
+        if (titleLayout2 != null) {
+            StatusBarUtil.setStatusBarHeight(titleLayout2);
         }
     }
 
