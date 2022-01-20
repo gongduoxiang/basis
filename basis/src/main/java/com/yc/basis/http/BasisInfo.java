@@ -24,7 +24,7 @@ public class BasisInfo {
     public static String xyUrl = "";
     public static String zcUrl = "";
     public static String about_us = "";
-    public static String wxId = "wx022d083c53dea539";
+    public static String wxId = "wx4b16ffe72e22b3cc";
     public static String qq = "1536192681";
 
     public static String getFileprovider() {
